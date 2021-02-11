@@ -7,9 +7,6 @@ spec:
   - name: sec-ctx-demo
     image: busybox
     command: [ "sh", "-c", "sleep 1h" ]
-    securityContext:
-      seLinuxOptions:
-        level: "s0:c123,c456"
     volumeMounts:
     - name: sec-ctx-vol
       mountPath: /data/demo
